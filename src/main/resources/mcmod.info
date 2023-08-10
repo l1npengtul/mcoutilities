@@ -1,13 +1,13 @@
 [
     {
-        "modid": "minecraft-forge-kotlin-template",
-        "name": "Minecraft Forge Kotlin Template",
-        "description": "injection point type '%s'",
+        "modid": "mcoutilities",
+        "name": "MinecraftOnline Utilities",
+        "description": "Utility Mod for MinecraftOnline by l1npengtul",
         "version": "${version}",
         "mcversion": "${mcversion}",
         "url": "",
         "updateUrl": "",
-        "authorList": [],
+        "authorList": ["l1npengtul <l1npengtul@protonmail.com>"],
         "credits": "",
         "logoFile": "",
         "screenshots": [],

@@ -25,15 +25,17 @@ buildscript {
 plugins {
     java
     scala
+    id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
 apply {
     plugin("net.minecraftforge.gradle")
     plugin("kotlin")
+    plugin("com.github.johnrengelman.shadow")
 }
 
-version = modVersion
-group = modGroup
+version = "0.0.1"
+group = "lol.l1npengtul.mcoutilities"
 
 configure<UserDevExtension> {
     // the mappings can be changed at any time, and must be in the following format.
@@ -76,12 +78,17 @@ repositories {
     jcenter()
     mavenCentral()
     maven(url = "http://maven.shadowfacts.net/")
+    maven("https://repo.essential.gg/repository/maven-public/")
+    maven("https://jitpack.io")
 }
 
 dependencies {
     "minecraft"("net.minecraftforge:forge:1.12.2-14.23.5.2855")
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.50")
-    compile("net.shadowfacts:Forgelin:1.8.4")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.50")
+    implementation("net.shadowfacts:Forgelin:1.8.4")
+    implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.18")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
+    implementation("com.github.TheFruxz:Kojang:1.0")
 }
 
 // processResources
